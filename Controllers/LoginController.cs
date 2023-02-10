@@ -96,7 +96,7 @@ namespace UserServiceHub.Controllers
         [HttpPost]
         public object createcontact([FromBody]Login lg)
         {
-
+            // CREATING THE OBJECT OF DMO FOR ASSIGN INCOMING DATA.
             EmployeemasterDMO table = new EmployeemasterDMO();
             try
             {
