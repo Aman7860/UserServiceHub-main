@@ -51,6 +51,8 @@ namespace UserServiceHub.Controllers
         [HttpPost]
         public Response userlogin([FromBody]Login Lg)
         {
+
+            //Checking User name and Password for login into application
             var obj = _DatabaseContext.UserModel.Where(t => t.UserName == Lg.UserName & t.Passwords == Lg.Password).ToList();
             
                 var status = obj.Select(l => l.Status).SingleOrDefault();
