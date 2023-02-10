@@ -129,7 +129,7 @@ namespace UserServiceHub.Controllers
         public Response userlogout([FromBody] Login Lg)
         {
             
-
+            //CHECKING USER LOGOUT 
             try
             {
                 var id = _DatabaseContext.UserModel.Where(t => t.UserName == Lg.UserName && t.Passwords == Lg.Password).Select(t => t.UserId).SingleOrDefault();
